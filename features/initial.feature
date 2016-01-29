@@ -11,7 +11,7 @@ Feature: initial
     Then I should see "Registration Number 03144239"
 
   @api
-  Scenario: On the account page the account age is displayed
-    Given I am logged in as a user with the "authenticated user" role
-    When I click "My account"
-    Then I should see "Member for"
+  Scenario: On the Add content page I should be able to add a Testimony
+    Given I am logged in as a user with the "editor" role
+    When I go to "/node/add"
+    Then I should see "Testimony"
