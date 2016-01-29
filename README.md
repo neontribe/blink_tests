@@ -1,0 +1,35 @@
+Install tests in local evironment
+=================================
+
+  * git clone git@github.com:neontribe/blink_tests.git
+  * `cd blink_tests`
+  * `composer install` 
+    (You might need to get composer first `curl -sS https://getcomposer.org/installer | php`)
+  * create a `behat.yml` with (replace the drupal_root with your local instance path and the base_url with your local site's base url):
+  ```
+    default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
+  extensions:
+    Behat\MinkExtension:
+      goutte: ~
+      selenium2: ~
+      base_url: http://localhost
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: 'drupal'
+      drupal:
+        drupal_root: /path/to/bananalink/drupal/root
+~                                                            
+  ```
+
+  * run `bin/behat --init`
+  * see predefined steps by running: `bin/behat -di`
+
+  * run tests with `bin/behat`
