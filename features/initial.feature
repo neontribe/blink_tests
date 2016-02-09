@@ -14,4 +14,4 @@ Feature: initial
   Scenario: On the Add content page I should be able to add a Testimony
     Given I am logged in as a user with the "editor" role
     When I go to "/node/add"
-    Then I should see "Testimony"
+    Then I should see "West"

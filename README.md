@@ -7,7 +7,7 @@ Install tests in local evironment
   * `COMPOSER_BIN_DIR=bin php composer.phar require drupal/drupal-extension='~3.0'`
   * create a `behat.yml` with (replace the drupal_root with your local instance path and the base_url with your local site's base url):
   ```
-    default:
+default:
   suites:
     default:
       contexts:
@@ -20,13 +20,12 @@ Install tests in local evironment
     Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      base_url: http://localhost
+      base_url: http://bananalink
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: 'drupal'
       drupal:
-        drupal_root: /path/to/bananalink/drupal/root
-~                                                            
+        drupal_root: /home/katja/public_html/bananalink
   ```
 
   * run `bin/behat --init`
