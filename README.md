@@ -1,5 +1,6 @@
 Install tests in local evironment
 =================================
+You will need php5-curl package installed for the instructions below to complete.
 
   * git clone git@github.com:neontribe/blink_tests.git
   * `cd blink_tests`
