@@ -5,7 +5,7 @@ You will need php5-curl package installed for the instructions below to complete
   * git clone git@github.com:neontribe/blink_tests.git
   * `cd blink_tests`
   * `curl -sS https://getcomposer.org/installer | php`
-  * `COMPOSER_BIN_DIR=bin php composer.phar require drupal/drupal-extension='~3.0'`
+  * `composer install`
   * create a `behat.yml` with (replace the drupal_root with your local instance path and the base_url with your local site's base url):
   ```
 default:
