@@ -33,3 +33,34 @@ default:
   * see predefined steps by running: `bin/behat -di`
 
   * run tests with `bin/behat`
+
+*************************************************************************
+
+
+INSTALL SELENIUM
+
+Selenium allows 'real browser' emulator testing.
+
+These instructions follow http://docs.behat.org/en/v2.5/cookbook/behat_and_mink.html#test-in-browser-selenium2-session .
+
+To set up, first you need Java JDK installed (skip if you already have this):
+
+  * run `sudo apt-get install default-jdk`
+
+Then you install Selenium server:
+
+  * go to: http://docs.seleniumhq.org/download/
+  * on 'Selenium Standalone Server' section, download the latest version (2.51.0 as of 08-02-2016)
+  * save the .jar file to the blink_tests folder
+
+Then you run selenium server:
+
+  * from the terminal, run `java -jar selenium-server-*.jar`. This starts the Selenium server.
+
+...Then simply run bin/behat from another terminal for testing.
+
+(N.B. Might be easier to share this .jar via Git as a common library. But not currently being done.)
+
+A NOTE ON RUNNING SELENIUM TESTS
+
+To run the Selenium browser emulator during tests, the relevant scenario/s in you feature/s must have a @javascript on it. Good, further instructions here: http://docs.behat.org/en/v2.5/cookbook/behat_and_mink.html#test-in-browser-selenium2-session .
